@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 //view model should have the parameter for which we want to get the  datasource
 class Home_viewmodel(private val tododatasource: Tododatasource = graph.todorepo) : ViewModel() {
 
-    //creating our state with the help of helper class with the help of mutable state
+    //creating our state with the help of helper class with the  mutable state
     private val _state = MutableStateFlow(Home_viewstate()) //limiting to only this class
     val state: StateFlow<Home_viewstate> //exposing the state
         get() = _state //returning the state

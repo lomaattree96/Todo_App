@@ -9,12 +9,17 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 
+// define a form of behaviour that the implementing type have to follow.
+//contains declarartions for abstract class and methods for implementing.
+//cannot stor e a state
 interface Todo_dao {
 
     @Query("SELECT * FROM todo" )
     fun selectAll() : Flow<List<todo>>
+    //a flow is a type that can emit multiple values sequentially, as opposed to suspend functions that return only a single value.
+    // For example, flow is used  to receive live updates from a database.
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE) //constant to replace the old data and continue the transaction
     suspend fun insert(todo: todo)
 
 

@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.notepad.data.todo
 
-@Database(entities = [todo ::class]  ,version =1,exportSchema = false)
+@Database(entities = [todo::class]  ,version =1,exportSchema = false)
 abstract class tododatabase : RoomDatabase() {
     abstract fun todoDao(): Todo_dao
            //to access the creation of database

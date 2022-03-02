@@ -3,7 +3,7 @@ package com.example.notepad.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-//entity will make a class ot have a  mapping sqlite table in databsse
+//entity will make a class to have a  mapping sqlite table in databsse
 
 //data class
 @Entity

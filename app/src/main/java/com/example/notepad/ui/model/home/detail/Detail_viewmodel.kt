@@ -38,8 +38,8 @@ class Detail_viewmodel(
             }.collect {
                 _state.value = it
             }
-
         }
+
 
     }
 
